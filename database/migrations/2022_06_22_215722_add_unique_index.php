@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('new_users', function (Blueprint $table) {
-            $table->string('address')->change();
+            $table->string('address')->unique(false)->change();
       });
     }
 };
